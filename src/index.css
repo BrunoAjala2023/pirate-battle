@@ -122,3 +122,33 @@ main {
 .menu select:focus {
   outline: 2px solid #2ecc71;
 }
+
+.menu select {
+  display: block;
+  width: 100%;
+  margin: 8px auto 20px;
+  padding: 12px;
+
+  border: 1px solid #5f7c87;
+  border-radius: 8px;
+
+  background: #1d4f5e;
+  color: white;
+
+  font-size: 16px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.menu select:focus {
+  outline: 2px solid #2ecc71;
+}
+
+.menu h2 {
+  margin-top: 0;
+}
+
+.menu p {
+  text-align: center;
+}
