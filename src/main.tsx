@@ -6,12 +6,10 @@ import "./index.css";
 import App from "./App.tsx";
 
 async function enableMocking() {
-  if (import.meta.env.DEV) {
     const { worker } = await import("./mocks/browser");
 
     await worker.start();
   }
-}
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -103,3 +103,22 @@ main {
 .menu button:hover {
   opacity: 0.9;
 }
+
+.menu select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+
+  border: 1px solid #5f7c87;
+  border-radius: 8px;
+
+  background: #1d4f5e;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu select:focus {
+  outline: 2px solid #2ecc71;
+}
