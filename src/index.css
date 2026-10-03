@@ -152,3 +152,74 @@ main {
 .menu p {
   text-align: center;
 }
+
+.ranking {
+  width: 100%;
+}
+
+.ranking h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.ranking-header,
+.ranking-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 80px 70px;
+  gap: 8px;
+  align-items: center;
+}
+
+.ranking-header {
+  padding: 8px 10px;
+  color: #9badb3;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.ranking-row {
+  padding: 12px 10px;
+  margin-bottom: 6px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+.ranking-row strong {
+  font-size: 16px;
+}
+
+.history {
+  width: 100%;
+}
+
+.history h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.history-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 10px;
+  margin-bottom: 8px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.history-row div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.history-row span {
+  color: #b9cbd1;
+  font-size: 14px;
+}

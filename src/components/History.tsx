@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { getMatchHistory } from "../api/historyApi";
 
 export function History() {
@@ -32,28 +31,31 @@ export function History() {
   }
 
   return (
-    <div>
+    <div className="history">
       <h2>📜 Histórico</h2>
 
-      {data?.data?.map((match) => (
-  <div key={match.id}>
-    <strong>
-      {match.result === "victory"
-        ? "🏆 Vitória"
-        : "☠️ Derrota"}
-    </strong>
+      {data?.data.map((match) => (
+        <div
+          className="history-row"
+          key={match.id}
+        >
+          <div>
+            <strong>
+              {match.result === "victory"
+                ? "🏆 Vitória"
+                : "☠️ Derrota"}
+            </strong>
 
-    <span>
-      {" "}
-      — {match.score} pontos
-    </span>
+            <span>
+              {match.score} pontos
+            </span>
+          </div>
 
-    <span>
-      {" "}
-      — {match.duration}s
-    </span>
-  </div>
-))}
+          <span>
+            {match.duration}s
+          </span>
+        </div>
+      ))}
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { getRanking } from "../api/rankingApi";
 
 export function Ranking() {
@@ -20,7 +19,9 @@ export function Ranking() {
   if (isError) {
     return (
       <div>
-        <p>Não foi possível carregar o ranking.</p>
+        <p>
+          Não foi possível carregar o ranking.
+        </p>
 
         <button onClick={() => refetch()}>
           Tentar novamente
@@ -30,18 +31,35 @@ export function Ranking() {
   }
 
   return (
-    <div>
+    <div className="ranking">
       <h2>🏆 Ranking</h2>
 
+      <div className="ranking-header">
+        <span>#</span>
+        <span>Jogador</span>
+        <span>Pontos</span>
+        <span>Tempo</span>
+      </div>
+
       {data?.data.map((entry, index) => (
-        <div key={entry.id}>
+        <div
+          className="ranking-row"
+          key={entry.id}
+        >
           <strong>
-            #{index + 1} {entry.player}
+            {index + 1}
           </strong>
 
           <span>
-            {" "}
-            — {entry.score} pontos
+            {entry.player}
+          </span>
+
+          <span>
+            {entry.score}
+          </span>
+
+          <span>
+            {entry.duration}s
           </span>
         </div>
       ))}
