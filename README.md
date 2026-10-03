@@ -7,7 +7,7 @@ The project combines React for the application interface with PixiJS for the rea
 ## Live Demo
 
 **Production:**
-Add the public Vercel URL here.
+https://pirate-battle-jade.vercel.app/
 
 ## GitHub
 
